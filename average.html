@@ -121,19 +121,25 @@
 		}
         </style>
 		<script>
-			var answer = " ";
-			function ENTER() {
-				console.log('answer');
-					if (answer == "IGADO" || "igado") {
+		var igado = 0;
+		var answer = " ";
+		
+		function Submit() {
+
+            answer = document.getElementById('answer').innerHTML;
+
+            if (answer == "IGADO") {
+               
 						alert("SO TAMA! PROCEED TO THE NEXT MODE.");
 						location.replace("hard.html");
+						
 					}
 					else {
 						alert("NOOO MAGUGUTOM KA. TRY AGAIN!");
 						location.reload();
 					}
-			}
-		
+                 }   
+
 		function LI(){
 			document.getElementById('answer').innerHTML += "I";
 		}
@@ -162,7 +168,7 @@
 			document.getElementById('answer').innerHTML = '';
 		}
 		</script>
-</head>
+		</head>
 <body>
 	<div id="mySidebar" class="sidebar">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -192,16 +198,16 @@
 	
 	<div class="keyboard_keys">
 			<div class="keys">
-				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light"  onclick="LI()">I</button>
-				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light"  onclick="LO()">O</button>
-				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" onclick="LA()">A</button>
-				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" onclick="LS()">S</button>
-				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" onclick="LD()">D</button>	
-				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" onclick="LG()">G</button>
-				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" onclick="LL()">L</button>
-				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" onclick="LL()">N</button>
+				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" id="I"  onclick="LI()">I</button>
+				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" id="O"  onclick="LO()">O</button>
+				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" id="A"  onclick="LA()">A</button>
+				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" id="S"  onclick="LS()">S</button>
+				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" id="D"  onclick="LD()">D</button>	
+				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" id="G"  onclick="LG()">G</button>
+				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" id="L"  onclick="LL()">L</button>
+				<button style="color:#FFDE59; background-color:#e60000;" class="btn btn-light" id="N"  onclick="LN()">N</button>
 				<br>
-				<button class="btn btn-light" style="width: 222px; margin: 4px; color:#FFDE59; background-color:#0033cc; font-family: 'Press Start 2P', serif;" onclick="ENTER()">EAT!</button>
+				<button class="btn btn-light" style="width: 222px; margin: 4px; color:#FFDE59; background-color:#0033cc; font-family: 'Press Start 2P', serif;" onclick="Submit()">EAT!</button>
 				<button class="btn btn-light" style="width: 222px; margin: 4px; color:#FFDE59; background-color:#0033cc; font-family: 'Press Start 2P', serif;" onclick="CLEAR()">UL(EAT)!</button>
 
 			</div>
